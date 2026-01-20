@@ -1,0 +1,418 @@
+/* RESET & BASE */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    background-color: #0d1117; /* Dark GitHub-like background */
+    color: #e6edf3;
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+}
+a { text-decoration: none; color: inherit; }
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+/* 1. HERO */
+.hero {
+    padding: 100px 0 60px;
+    background: radial-gradient(circle at top, #1f2937 0%, #0d1117 100%);
+}
+.badge {
+    background: #238636;
+    color: white;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.85em;
+    font-weight: 600;
+}
+h1 {
+    font-size: 3.5rem;
+    margin: 20px 0;
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+.highlight {
+    background: -webkit-linear-gradient(45deg, #58a6ff, #2ea043);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.subtitle {
+    font-size: 1.2rem;
+    color: #8b949e;
+    max-width: 600px;
+    margin: 0 auto 40px;
+}
+
+/* BUTTONS */
+.cta-group { display: flex; gap: 20px; justify-content: center; margin-bottom: 50px; }
+.btn {
+    padding: 12px 30px;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: transform 0.2s;
+    cursor: pointer;
+}
+.btn:hover { transform: translateY(-2px); }
+.btn-primary { background: #238636; color: white; }
+.btn-secondary { background: #30363d; color: white; border: 1px solid #8b949e; }
+.large-btn { font-size: 1.2rem; padding: 15px 40px; }
+
+/* Free Note under buttons */
+.free-note {
+    margin-top: 15px;
+    font-size: 0.95rem;
+    color: #8b949e;
+}
+
+.free-note strong {
+    color: #2ea043; /* Matches the green download button */
+    font-weight: 700;
+}
+
+/* HERO IMAGE MOCKUP */
+.hero-image {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+}
+/* Update the Window container to the new shape */
+.mockup-window {
+    width: 100%;
+    max-width: 550px; 
+    /* height: 400px;  <-- DELETE THIS LINE so aspect-ratio works */
+    aspect-ratio: 4 / 5; /* This will auto-calculate height. e.g. if width is 400px, height becomes 500px */
+    background: #161b22;
+    border: 1px solid #30363d;
+    border-radius: 12px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+    overflow: hidden; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto; 
+}
+
+/* Style the video itself */
+.mockup-window video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    display: block;
+}
+
+/* 2. APP GRID */
+.apps-section { padding: 80px 0; border-top: 1px solid #30363d; }
+.section-desc { color: #8b949e; margin-bottom: 40px; }
+.app-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+.app-card {
+    background: #161b22;
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid #30363d;
+    transition: 0.3s;
+    text-align: left; /* Better for reading list */
+}
+.app-card:hover { border-color: #58a6ff; }
+
+/* Header inside card for Free Tag placement */
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    margin-bottom: 15px;
+}
+.icon-box { font-size: 2rem; }
+.tag-free {
+    background: #238636;
+    color: white;
+    font-size: 0.75rem;
+    font-weight: 800;
+    padding: 4px 8px;
+    border-radius: 4px;
+    letter-spacing: 0.5px;
+}
+
+h3 { margin-bottom: 10px; }
+
+
+/* Tiers */
+.free-tier { border-top: 4px solid #8b949e; }
+.pro-tier { 
+    border-top: 4px solid #2ea043; 
+    transform: scale(1.05); 
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    background: #1c2128;
+    z-index: 2;
+}
+
+.best-value {
+    position: absolute;
+    top: -12px;
+    right: 20px;
+    background: #2ea043;
+    color: white;
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 20px;
+}
+
+.btn-outline {
+    display: block;
+    width: 100%;
+    text-align: center;
+    border: 1px solid #30363d;
+    color: #e6edf3;
+    padding: 10px;
+    border-radius: 6px;
+    transition: all 0.2s;
+}
+.btn-outline:hover { border-color: #8b949e; background: #21262d; }
+.full-width { display: block; width: 100%; text-align: center; }
+
+
+/* 4. GUIDE TIMELINE */
+.guide-section { padding: 80px 0; background: #0d1117; }
+.timeline {
+    margin-top: 50px;
+    text-align: left;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.step { display: flex; gap: 20px; margin-bottom: 40px; }
+.step-number {
+    width: 40px; height: 40px;
+    background: #1f2937;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: #58a6ff;
+    flex-shrink: 0;
+}
+.step-content h3 { color: #e6edf3; margin-top: 5px; }
+.step-content p { color: #8b949e; font-size: 0.95rem; }
+
+/* 5. DISCLAIMER */
+.disclaimer-section {
+    background: #161b22;
+    padding: 40px 0;
+    font-size: 0.85rem;
+    color: #8b949e;
+    border-top: 1px solid #30363d;
+    border-bottom: 1px solid #30363d;
+}
+
+/* 6. FOOTER (The Grand Finale) */
+footer {
+    padding: 120px 0;
+    background: radial-gradient(circle at center, #1c232b 0%, #0d1117 70%);
+    border-top: 1px solid #30363d;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Big Text */
+.final-cta-text {
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin-bottom: 40px;
+    background: -webkit-linear-gradient(45deg, #fff, #8b949e);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* --- DYNAMIC GUIDE SELECTOR --- */
+
+.model-selector {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 50px;
+    flex-wrap: wrap;
+}
+
+.model-btn {
+    background: #161b22;
+    color: #8b949e;
+    border: 1px solid #30363d;
+    padding: 15px 40px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s;
+    min-width: 160px;
+}
+
+.model-btn:hover {
+    border-color: #58a6ff;
+    color: #e6edf3;
+}
+
+/* The Active Button Style */
+.model-btn.active {
+    background: #238636;
+    color: white;
+    border-color: #2ea043;
+    box-shadow: 0 4px 12px rgba(35, 134, 54, 0.4);
+}
+
+/* Content Hiding Logic */
+.guide-content {
+    display: none; /* Hide everything by default */
+    animation: fadeIn 0.4s ease;
+}
+
+.guide-content.active {
+    display: block; /* Show only the active one */
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+/* The MEGA Button */
+.mega-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 15px;
+    background: #238636;
+    color: white;
+    padding: 22px 60px;
+    font-size: 1.5rem; /* Huge Text */
+    border-radius: 50px; /* Pill Shape */
+    font-weight: 700;
+    box-shadow: 0 0 0 0 rgba(46, 160, 67, 0.7); /* Pulse start */
+    border: 2px solid #4ac26b; /* Lighter border for definition */
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Bouncy effect */
+}
+
+/* Hover Effect: Glow and Grow */
+.mega-btn:hover {
+    transform: scale(1.05) translateY(-5px);
+    background: #2ea043;
+    box-shadow: 0 20px 40px -10px rgba(46, 160, 67, 0.6);
+}
+
+/* The "Safe" text below button */
+.safe-text {
+    margin-top: 20px;
+    color: #8b949e;
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+.footer-links {
+    margin-top: 80px;
+    color: #484f58;
+    font-size: 0.8rem;
+    border-top: 1px solid #21262d;
+    padding-top: 20px;
+    width: 100%;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Responsive adjust */
+@media (max-width: 600px) {
+    h1 { font-size: 2.5rem; }
+    .cta-group { flex-direction: column; }
+    .app-grid { grid-template-columns: 1fr; }
+    .final-cta-text { font-size: 2.5rem; }
+    .mega-btn { padding: 18px 40px; font-size: 1.2rem; width: 100%; justify-content: center; }
+}
+
+/* --- STEERING WHEEL COMBO STYLES --- */
+
+.combo-label {
+    margin-top: 15px;
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+    color: #e6edf3;
+    font-weight: 600;
+}
+
+.combo-sequence {
+    display: flex;
+    flex-wrap: wrap; /* Wraps on mobile */
+    align-items: center;
+    gap: 8px;
+    background: #161b22;
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid #30363d;
+}
+
+.combo-key-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+/* The Button Look */
+.key {
+    width: 45px;
+    height: 45px;
+    background: linear-gradient(145deg, #21262d, #161b22);
+    border: 1px solid #30363d;
+    border-radius: 8px; /* Rounded square like car buttons */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    color: #e6edf3;
+    font-size: 0.9rem;
+    box-shadow: 0 4px 0 #0d1117; /* 3D Click effect */
+}
+
+/* Specific styling for symbols */
+.icon-key {
+    font-size: 1.2rem;
+    color: #58a6ff; /* Blue icons */
+}
+
+/* The Instruction Text (x2, Hold) */
+.action-tag {
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: #8b949e;
+    text-transform: uppercase;
+}
+
+/* Color coding actions for clarity */
+.action-tag.hold {
+    color: #d29922; /* Gold for HOLD */
+}
+
+.action-tag.finish {
+    color: #2ea043; /* Green for FINISH */
+}
+
+/* The arrows between steps */
+.arrow {
+    color: #30363d;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+/* Mobile Tweak: Make it scrollable or wrap nicely */
+@media (max-width: 600px) {
+    .combo-sequence {
+        justify-content: center;
+    }
+    .arrow { display: none; } /* Hide arrows on mobile to save space */
+}
