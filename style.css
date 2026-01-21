@@ -416,3 +416,74 @@ footer {
     }
     .arrow { display: none; } /* Hide arrows on mobile to save space */
 }
+
+
+
+/* --- PRO PAGE STYLES --- */
+.pro-page {
+    background: #0f1014;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.pro-container {
+    background: #1a1b20;
+    padding: 40px;
+    border-radius: 20px;
+    border: 1px solid #2a2b30;
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+}
+
+.pro-header h1 { font-size: 2rem; margin: 10px 0; color: white; }
+.pro-header p { color: #a1a1aa; margin-bottom: 30px; }
+
+.steps-box {
+    text-align: left;
+    background: #23242a;
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+}
+
+.step-row {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.step-row:last-child { margin-bottom: 0; }
+
+.step-num {
+    background: #3b82f6;
+    color: white;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    flex-shrink: 0;
+}
+
+.step-text h3 { color: white; margin: 0 0 5px 0; font-size: 1rem; }
+.step-text p { color: #9ca3af; margin: 0; font-size: 0.9rem; }
+
+.full-width { width: 100%; text-align: center; justify-content: center; }
+
+.secure-note { color: #4b5563; font-size: 0.85rem; margin-top: 15px; }
+
+.back-link {
+    display: block;
+    margin-top: 20px;
+    color: #6b7280;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+.back-link:hover { color: white; }
