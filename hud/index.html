@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChanApps - Unlock Your Car</title>
+    <meta name="description" content="The safest and easiest way to install Waze, YouTube, World Radio and more on your Changan infotainment system.">
+    <link rel="stylesheet" href="hud.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ESRRFH5F38"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-ESRRFH5F38');
+    </script>
+</head>
+<body>
+<div id="boot"><div><button id="start">START<br>ENGINE</button><p>PRESS TO START</p></div></div>
+<div id="bar"></div>
+
+<nav>
+    <a href="#" class="logo">CHANAPPS</a>
+    <a href="#apps">Apps</a>
+    <a href="#guide">Install</a>
+    <a href="pro.html">Pro</a>
+    <a href="#download" class="nav-cta">Download</a>
+    <span id="clock">--:--</span>
+</nav>
+
+<div id="mini"><b id="mv">000</b><small>KM/H</small><span id="mg">P</span></div>
+
+<header class="hero">
+    <div class="lights"><span>● SYSTEM ONLINE</span><span>● ADB READY</span><span>● 3 FREE APPS</span></div>
+    <h1>Unlock Your Car's<br><span class="glitch cursor" id="rotor">Full Potential</span></h1>
+    <p class="sub">The safest and easiest way to install essential apps on your Changan infotainment system.</p>
+
+    <div class="cta">
+        <a href="https://github.com/changanconnect-hub/chanapps-web/releases/download/1.0.7/ChanApps.Setup.1.0.9.exe" class="btn btn-primary">Download Free Version</a>
+        <a href="pro.html" target="_blank" class="btn btn-secondary">Get Pro Key ($5.99)</a>
+    </div>
+    <p class="note" style="margin-top:18px">💻 <b>Windows Only</b> (Windows 10 / 11)</p>
+    <p class="note">✨ <b>Includes 3 Free Apps forever.</b> No credit card needed to start.</p>
+
+    <div class="dash">
+        <div class="gauge" id="g-speed"></div>
+        <div class="screen">
+            <div class="mockup-window">
+                <video autoplay muted loop playsinline preload="metadata">
+                    <source src="../demo.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+        <div class="gauge" id="g-rpm"></div>
+    </div>
+</header>
+
+<div class="trip">
+    <div class="stat rv"><b data-n="3">0</b>Free apps forever</div>
+    <div class="stat rv"><b data-n="4">0</b>Car models supported</div>
+    <div class="stat rv"><b data-n="5.99" data-d="2" data-p="$">0</b>One-time Pro key</div>
+</div>
+
+<div class="mq"><div>
+    <span>◉ WAZE</span><span>◉ WORLD RADIO</span><span>◉ YOUTUBE</span><span>◉ YANDEX BROWSER</span><span>◉ GESTURE CONTROLS</span><span>◉ SETTINGS</span>
+    <span>◉ WAZE</span><span>◉ WORLD RADIO</span><span>◉ YOUTUBE</span><span>◉ YANDEX BROWSER</span><span>◉ GESTURE CONTROLS</span><span>◉ SETTINGS</span>
+    <span>◉ WAZE</span><span>◉ WORLD RADIO</span><span>◉ YOUTUBE</span><span>◉ YANDEX BROWSER</span><span>◉ GESTURE CONTROLS</span><span>◉ SETTINGS</span>
+    <span>◉ WAZE</span><span>◉ WORLD RADIO</span><span>◉ YOUTUBE</span><span>◉ YANDEX BROWSER</span><span>◉ GESTURE CONTROLS</span><span>◉ SETTINGS</span>
+</div></div>
+
+<section id="apps">
+    <div class="wrap">
+        <h2 class="rv">Free &amp; Premium Apps</h2>
+        <p class="section-desc rv">Access navigation, music, and entertainment directly on your dashboard.</p>
+        <div class="app-grid">
+            <div class="app-card rv"><div class="icon-box">📍</div><h3>Navigation</h3><p>Waze</p></div>
+            <div class="app-card rv"><div class="icon-box">🎵</div><h3>Music</h3><p>World Radio</p></div>
+            <div class="app-card rv"><div class="icon-box">🎬</div><h3>Entertainment</h3><p>YouTube, Yandex Browser</p></div>
+            <div class="app-card rv"><div class="icon-box">⚙️</div><h3>Utilities</h3><p>Settings, Gesture Controls</p></div>
+        </div>
+    </div>
+</section>
+
+<section id="guide">
+    <div class="wrap">
+        <h2 class="rv">How to Install</h2>
+        <p class="section-desc rv">Select your car model to see specific instructions.</p>
+        <div class="model-selector" id="models"></div>
+        <div id="guide-out"></div>
+    </div>
+</section>
+
+<div class="disclaimer">
+    <div class="wrap"><p><strong>Disclaimer:</strong> ChanApps is a third-party utility. Any modifications to your vehicle's software are performed at your own risk. Please use entertainment apps only while parked.</p></div>
+</div>
+
+<footer id="download" class="final">
+    <div class="wrap" style="text-align:center">
+        <h2 class="final-cta-text rv">Ready to install the apps?</h2>
+        <a href="https://github.com/changanconnect-hub/chanapps-web/releases/download/1.0.7/ChanApps.Setup.1.0.9.exe" class="btn btn-primary mega-btn" download>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Download Installer (.exe)
+        </a>
+        <p class="safe-text">✅ 100% Safe &amp; Secure • Windows 10/11</p>
+        <div class="footer-links">
+            <p>Version 1.0.9</p>
+            <p>Support: <a href="mailto:changanconnect@gmail.com">changanconnect@gmail.com</a></p>
+            <p>&copy; 2026 ChanApps</p>
+        </div>
+    </div>
+</footer>
+
+<script src="../script.js"></script>
+<script src="hud.js"></script>
+</body>
+</html>
